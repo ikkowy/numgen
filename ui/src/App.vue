@@ -11,16 +11,18 @@
               />
             </template>
             <v-list density="compact">
-              <v-list-item
-                prepend-icon="mdi-wrench"
-                title="Administration"
-                @click="console.log('settings')"
-              />
-              <v-list-item
-                prepend-icon="mdi-logout"
-                title="Logout"
-                @click="console.log('logout')"
-              />
+              <v-list-item @click="console.log('settings')">
+                <template #prepend>
+                  <v-icon icon="mdi-wrench" class="opacity-100" />
+                </template>
+                <v-list-item-title>Administration</v-list-item-title>
+              </v-list-item>
+              <v-list-item @click="console.log('logout')">
+                <template #prepend>
+                  <v-icon icon="mdi-logout" class="opacity-100" />
+                </template>
+                <v-list-item-title>Logout</v-list-item-title>
+              </v-list-item>
             </v-list>
           </v-menu>
         </template>
