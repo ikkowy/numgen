@@ -1,11 +1,10 @@
 <template>
   <v-app>
     <v-main>
-      <HelloWorld />
+      Numgen
     </v-main>
   </v-app>
 </template>
 
 <script setup lang="ts">
-  //
 </script>
