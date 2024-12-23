@@ -2,7 +2,9 @@
   <v-app>
     <v-main class="pa-5">
       <v-app-bar color="primary">
-        <v-app-bar-title style="user-select: none">Number Generator</v-app-bar-title>
+        <v-app-bar-title style="user-select: none">
+          Number Generator
+        </v-app-bar-title>
         <template #append>
           <v-menu>
             <template #activator="{ props }">

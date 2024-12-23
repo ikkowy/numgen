@@ -25,12 +25,23 @@
         prepend-icon="mdi-content-copy"
         size="large"
         variant="flat"
+        @click="showCopyMessage = true"
       >
         Copy
       </v-btn>
+      <v-snackbar
+        min-width="0"
+        timeout="1500"
+        v-model="showCopyMessage"
+      >
+        Content copied to clipboard!
+      </v-snackbar>
     </v-card-actions>
   </v-card>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+
+const showCopyMessage = ref<boolean>(false);
 </script>
