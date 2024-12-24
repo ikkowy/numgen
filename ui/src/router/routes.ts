@@ -12,5 +12,9 @@ export default [
         component: () => import('@/pages/HomePage.vue'),
       },
     ],
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    component: () => import('@/pages/PageNotFound.vue')
   }
 ];

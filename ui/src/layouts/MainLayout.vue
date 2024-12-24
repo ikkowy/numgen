@@ -13,13 +13,13 @@
             />
           </template>
           <v-list density="compact">
-            <v-list-item @click="console.log('settings')">
+            <v-list-item @click="router.push('/admin')">
               <template #prepend>
                 <v-icon icon="mdi-wrench" class="opacity-100" />
               </template>
               <v-list-item-title>Administration</v-list-item-title>
             </v-list-item>
-            <v-list-item @click="console.log('logout')">
+            <v-list-item @click="logout">
               <template #prepend>
                 <v-icon icon="mdi-logout" class="opacity-100" />
               </template>
@@ -37,3 +37,13 @@
     </v-main>
   </v-app>
 </template>
+
+<script setup lang="ts">
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+function logout(): void {
+  router.push('/login');
+}
+</script>
