@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 
 import App from './App.vue'
 
-import { createVuetify } from 'vuetify';
+import { createVuetify, type ThemeDefinition } from 'vuetify';
 
 import 'vuetify/styles';
 
@@ -18,10 +18,19 @@ const router = createRouter({
   routes
 });
 
+const customTheme: ThemeDefinition = {
+  dark: false,
+  colors: {
+    primary: '#7e003f',
+    secondary: '#d50072'
+  }
+};
+
 const vuetify = createVuetify({
   theme: {
-    defaultTheme: 'light',
-  },
+    defaultTheme: 'customTheme',
+    themes: { customTheme }
+  }
 });
 
 app.use(router);

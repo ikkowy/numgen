@@ -3,7 +3,7 @@
     <v-card-text>
       <div class="d-flex ga-3">
         <v-select label="Project" variant="outlined" />
-        <v-select label="Category" variant="outlined" />
+        <v-select label="Classifier" variant="outlined" />
       </div>
       <v-card class="pa-3 text-h3 text-mono text-center" variant="outlined">
         XXX-XXXXX-XXXXX-XXXXX-XXXXX
@@ -30,6 +30,7 @@
         Copy
       </v-btn>
       <v-snackbar
+        color="primary"
         min-width="0"
         timeout="1500"
         v-model="showCopyMessage"
