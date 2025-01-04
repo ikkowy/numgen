@@ -42,7 +42,14 @@
       </span>
       <span>
         numgen | Copyright © 2025 Vincent Westenberg |
-        <a href="https://github.com/ikkowy/numgen/blob/development/LICENSE">MIT License</a>
+        <v-tooltip location="top">
+          <template v-slot:activator="{ props }">
+            <a class="text-primary text-decoration-none" v-bind="props" href="https://github.com/ikkowy/numgen/blob/development/LICENSE">MIT License</a>
+          </template>
+          <template v-slot:default>
+            <img src="@/assets/opensourceparrot.gif" style="width: 3em" alt="https://cultofthepartyparrot.com/">
+          </template>
+        </v-tooltip>
       </span>
     </footer>
   </v-app>
