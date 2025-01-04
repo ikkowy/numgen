@@ -7,14 +7,17 @@
         </span>
       </v-app-bar-title>
       <template #append>
-        <v-select
-          :items="[{ label: '🇩🇪 DE', value: 'de' }, { label: '🇬🇧 EN', value: 'en' }]"
-          item-title="label"
-          item-value="value"
-          variant="plain"
-          v-model="lang"
-        />
-        <v-menu>
+        <div class="d-flex justify-center align-center ga-3">
+          <v-select
+            density="comfortable"
+            hide-details
+            :items="[{ label: '🇩🇪 DE', value: 'de' }, { label: '🇬🇧 EN', value: 'en' }]"
+            item-title="label"
+            item-value="value"
+            variant="outlined"
+            v-model="lang"
+          />
+          <v-menu>
           <template #activator="{ props }">
             <v-btn
               icon="mdi-account-circle"
@@ -36,6 +39,7 @@
             </v-list-item>
           </v-list>
         </v-menu>
+        </div>
       </template>
     </v-app-bar>
 
