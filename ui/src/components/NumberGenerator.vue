@@ -2,8 +2,8 @@
   <v-card class="d-flex flex-column pa-3">
     <v-card-text>
       <div class="d-flex ga-3">
-        <v-select label="Project" variant="outlined" />
-        <v-select label="Classifier" variant="outlined" />
+        <v-select :label="i18n.t('numberGenerator.project')" variant="outlined" />
+        <v-select :label="i18n.t('numberGenerator.classifier')" variant="outlined" />
       </div>
       <v-card class="pa-3 text-h3 text-mono text-center" variant="outlined">
         XXX-XXXXX-XXXXX-XXXXX-XXXXX
@@ -17,7 +17,7 @@
         size="large"
         variant="flat"
       >
-        Generate
+        {{ i18n.t('numberGenerator.generate') }}
       </v-btn>
       <v-btn
         class="text-none"
@@ -27,15 +27,16 @@
         variant="flat"
         @click="showCopyMessage = true"
       >
-        Copy
+        {{ i18n.t('numberGenerator.copy') }}
       </v-btn>
       <v-snackbar
-        color="primary"
+        color="secondary"
         min-width="0"
-        timeout="1500"
+        style="user-select: none"
+        timeout="2000"
         v-model="showCopyMessage"
       >
-        Content copied to clipboard!
+        {{ i18n.t('numberGenerator.copiedGeneratedNumber') }}
       </v-snackbar>
     </v-card-actions>
   </v-card>
@@ -43,6 +44,9 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const i18n = useI18n();
 
 const showCopyMessage = ref<boolean>(false);
 </script>

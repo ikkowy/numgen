@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar color="primary">
       <v-app-bar-title class="font-weight-bold" style="user-select: none">
-        Number Generator
+        {{ i18n.t('app.title') }}
       </v-app-bar-title>
       <template #append>
         <v-menu>
@@ -17,13 +17,13 @@
               <template #prepend>
                 <v-icon icon="mdi-wrench" class="opacity-100" />
               </template>
-              <v-list-item-title>Administration</v-list-item-title>
+              <v-list-item-title>{{ i18n.t('userMenu.administration') }}</v-list-item-title>
             </v-list-item>
             <v-list-item @click="logout">
               <template #prepend>
                 <v-icon icon="mdi-logout" class="opacity-100" />
               </template>
-              <v-list-item-title>Logout</v-list-item-title>
+              <v-list-item-title>{{ i18n.t('userMenu.logout') }}</v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>
@@ -40,8 +40,11 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
+import { useI18n } from 'vue-i18n';
 
 const router = useRouter();
+
+const i18n = useI18n();
 
 function logout(): void {
   router.push('/login');

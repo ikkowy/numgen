@@ -6,28 +6,32 @@
           <v-card-text class="text-center">
             <h1>
               <v-icon icon="mdi-magnify" />
-              Page not found.
+              {{ i18n.t('pageNotFound.pageNotFound') }}
             </h1>
             <div class="mt-3">
-              The requested page is not available.
+              {{ i18n.t('pageNotFound.requestedPageNotAvailable') }}
             </div>
           </v-card-text>
 
           <v-card-actions>
             <v-btn
+              class="text-none"
               color="primary"
+              prepend-icon="mdi-home"
               size="large"
               variant="flat"
               @click="router.push('/')"
             >
-              Home
+              {{ i18n.t('pageNotFound.home') }}
             </v-btn>
             <v-btn
+              class="text-none"
+              prepend-icon="mdi-arrow-left"
               size="large"
               variant="outlined"
               @click="router.back()"
             >
-              Back
+              {{ i18n.t('pageNotFound.back') }}
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -38,7 +42,9 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
-import { ro } from 'vuetify/locale';
+import { useI18n } from 'vue-i18n';
 
 const router = useRouter();
+
+const i18n = useI18n();
 </script>

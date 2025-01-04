@@ -1,0 +1,17 @@
+{
+  "app.title": "Number Generator",
+  "loginPage.login": "Login",
+  "loginPage.password": "Password",
+  "loginPage.username": "Username",
+  "numberGenerator.copiedGeneratedNumber": "The generated number has been copied to the clipboard.",
+  "numberGenerator.classifier": "Classifier",
+  "numberGenerator.copy": "Copy",
+  "numberGenerator.generate": "Generate",
+  "numberGenerator.project": "Project",
+  "pageNotFound.back": "Back",
+  "pageNotFound.home": "Home",
+  "pageNotFound.pageNotFound": "Page not found.",
+  "pageNotFound.requestedPageNotAvailable": "The requested page is not available.",
+  "userMenu.administration": "Administration",
+  "userMenu.logout": "Logout"
+}

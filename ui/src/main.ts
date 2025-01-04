@@ -8,14 +8,22 @@ import 'vuetify/styles';
 
 import '@mdi/font/css/materialdesignicons.css';
 
-const app = createApp(App);
-
 import { createRouter, createWebHistory } from 'vue-router';
 import routes from '@/router/routes';
+import { createI18n } from 'vue-i18n';
+
+import de from '@/i18n/de.json';
+
+const app = createApp(App);
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes
+});
+
+const i18n = createI18n({
+  locale: 'de',
+  messages: { de }
 });
 
 const customTheme: ThemeDefinition = {
@@ -34,6 +42,8 @@ const vuetify = createVuetify({
 });
 
 app.use(router);
+
+app.use(i18n);
 
 app.use(vuetify);
 

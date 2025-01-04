@@ -1,0 +1,17 @@
+{
+  "app.title": "Nummerngenerator",
+  "loginPage.login": "Anmelden",
+  "loginPage.password": "Passwort",
+  "loginPage.username": "Benutzername",
+  "numberGenerator.copiedGeneratedNumber": "Die erzeugte Nummer wurde in die Zwischenablage kopiert.",
+  "numberGenerator.classifier": "Klassifikator",
+  "numberGenerator.copy": "Kopieren",
+  "numberGenerator.generate": "Erzeugen",
+  "numberGenerator.project": "Projekt",
+  "pageNotFound.back": "Zurück",
+  "pageNotFound.home": "Startseite",
+  "pageNotFound.pageNotFound": "Seite nicht gefunden.",
+  "pageNotFound.requestedPageNotAvailable": "Die angeforderte Seite ist nicht verfügbar.",
+  "userMenu.administration": "Administration",
+  "userMenu.logout": "Abmelden"
+}
