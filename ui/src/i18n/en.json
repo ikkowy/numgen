@@ -1,4 +1,5 @@
 {
+  "app.demoWarning": "Demo Application ‒ Do not use in production!",
   "app.title": "Number Generator",
   "loginPage.login": "Login",
   "loginPage.password": "Password",

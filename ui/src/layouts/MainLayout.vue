@@ -35,6 +35,16 @@
         <router-view />
       </v-container>
     </v-main>
+
+    <footer class="d-flex justify-space-between pa-3">
+      <span class="font-weight-bold text-white blink bg-red px-1" style="border-radius: 7px">
+        {{ i18n.t('app.demoWarning') }}
+      </span>
+      <span>
+        numgen | Copyright © 2025 Vincent Westenberg |
+        <a href="https://github.com/ikkowy/numgen/blob/development/LICENSE">MIT License</a>
+      </span>
+    </footer>
   </v-app>
 </template>
 
@@ -50,3 +60,15 @@ function logout(): void {
   router.push('/login');
 }
 </script>
+
+<style scoped>
+.blink {
+  animation: blinker 3s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+</style>

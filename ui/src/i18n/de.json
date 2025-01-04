@@ -1,4 +1,5 @@
 {
+  "app.demoWarning": "Demo-Anwendung – Nicht im Echtbetrieb verwenden!",
   "app.title": "Nummerngenerator",
   "loginPage.login": "Anmelden",
   "loginPage.password": "Passwort",
