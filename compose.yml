@@ -1,0 +1,6 @@
+services:
+  app:
+    container_name: numgen
+    build: .
+    ports:
+      - "8080:80"
