@@ -7,6 +7,13 @@
         </span>
       </v-app-bar-title>
       <template #append>
+        <v-select
+          :items="[{ label: '🇩🇪 DE', value: 'de' }, { label: '🇬🇧 EN', value: 'en' }]"
+          item-title="label"
+          item-value="value"
+          variant="plain"
+          v-model="lang"
+        />
         <v-menu>
           <template #activator="{ props }">
             <v-btn
@@ -60,10 +67,17 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
+import { ref, watch } from 'vue';
 
 const router = useRouter();
 
 const i18n = useI18n();
+
+const lang = ref('de');
+
+watch(lang, () => {
+  i18n.locale.value = lang.value;
+});
 
 function logout(): void {
   router.push('/login');

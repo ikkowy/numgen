@@ -13,6 +13,7 @@ import routes from '@/router/routes';
 import { createI18n } from 'vue-i18n';
 
 import de from '@/i18n/de.json';
+import en from '@/i18n/en.json';
 
 const app = createApp(App);
 
@@ -23,7 +24,7 @@ const router = createRouter({
 
 const i18n = createI18n({
   locale: 'de',
-  messages: { de }
+  messages: { de, en }
 });
 
 const customTheme: ThemeDefinition = {
