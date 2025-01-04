@@ -3,6 +3,7 @@
     <v-app-bar color="primary">
       <v-app-bar-title class="font-weight-bold">
         <span style="cursor:pointer; user-select: none" @click="router.push('/')">
+          <v-icon icon="mdi-counter" /> &nbsp;
           {{ i18n.t('app.title') }}
         </span>
       </v-app-bar-title>
