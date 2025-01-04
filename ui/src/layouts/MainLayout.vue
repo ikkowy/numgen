@@ -50,10 +50,10 @@
     </v-main>
 
     <footer class="d-flex justify-space-between pa-3">
-      <span class="font-weight-bold text-white blink bg-red px-1" style="border-radius: 7px">
+      <span class="font-weight-bold text-white blink bg-red px-1 no-break" style="border-radius: 7px">
         {{ i18n.t('app.demoWarning') }}
       </span>
-      <span>
+      <span class="no-break">
         numgen | Copyright © 2025 Vincent Westenberg |
         <v-tooltip location="top">
           <template v-slot:activator="{ props }">
@@ -97,5 +97,11 @@ function logout(): void {
   50% {
     opacity: 0;
   }
+}
+
+.no-break {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 </style>
