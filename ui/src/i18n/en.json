@@ -1,4 +1,10 @@
 {
+  "admin.tab.classifiers": "Classifiers",
+  "admin.tab.projects": "Projects",
+  "admin.tab.projects.createClassifier": "Create Classifier",
+  "admin.tab.projects.createProject": "Create Project",
+  "admin.tab.projects.createUser": "Create User",
+  "admin.tab.users": "Users",
   "app.demoWarning": "Demo Application ‒ Do not use in production!",
   "app.title": "Number Generator",
   "loginPage.login": "Login",

@@ -1,4 +1,10 @@
 {
+  "admin.tab.classifiers": "Klassifikatoren",
+  "admin.tab.projects": "Projekte",
+  "admin.tab.projects.createClassifier": "Klassifikator erstellen",
+  "admin.tab.projects.createProject": "Projekt erstellen",
+  "admin.tab.projects.createUser": "Benutzer erstellen",
+  "admin.tab.users": "Benutzer",
   "app.demoWarning": "Demo-Anwendung – Nicht im Echtbetrieb verwenden!",
   "app.title": "Nummerngenerator",
   "loginPage.login": "Anmelden",
