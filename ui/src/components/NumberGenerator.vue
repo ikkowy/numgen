@@ -6,7 +6,7 @@
         <v-select :label="i18n.t('numberGenerator.classifier')" variant="outlined" />
       </div>
       <v-card class="pa-3 text-h3 text-mono text-center" variant="outlined">
-        XXX-XXXXX-XXXXX-XXXXX-XXXXX
+        XXXX-XX-XXXX
       </v-card>
     </v-card-text>
     <v-card-actions>
