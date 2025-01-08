@@ -2,10 +2,7 @@ package net.ikkowy.numgen.controller;
 
 import net.ikkowy.numgen.dto.UserDTO;
 import net.ikkowy.numgen.service.UserService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
@@ -22,7 +19,7 @@ public class UserController {
     }
 
     @PostMapping("/users")
-    public UserDTO createUser(UserDTO userDTO) {
+    public UserDTO createUser(@RequestBody UserDTO userDTO) {
         return userService.convertEntityToDTO(
                 userService.createUser(userDTO.getActive(), userDTO.getUsername(), userDTO.getPassword()));
     }
